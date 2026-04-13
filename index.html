@@ -49,6 +49,10 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
+        .section.section--wide {
+            grid-column: 1 / -1;
+            text-align: left;
+        }
         .section:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.2);
@@ -57,6 +61,34 @@
             font-size: 3em;
             color: #0366d6;
             margin-bottom: 20px;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 20px;
+            align-items: start;
+        }
+        .hero-summary {
+            background: #f3f6ff;
+            border: 1px solid #d9e4ff;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .info-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 16px;
+            background: #ffe8d6;
+            color: #8a4b1e;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin-bottom: 16px;
+        }
+        .summary-note {
+            margin: 0;
+            line-height: 1.8;
+            font-size: 1rem;
         }
         h2 {
             color: #24292e;
@@ -97,6 +129,12 @@
                 grid-template-columns: 1fr;
                 margin-top: 20px;
             }
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-summary {
+                padding: 18px;
+            }
         }
     </style>
 </head>
@@ -106,12 +144,27 @@
         <p>Thanks for Joining Us for an exciting day of learning and innovation at Github Copilot Dev Days | Gombe</p>
     </header>
     <div class="container">
+        <div class="section section--wide">
+            <div class="hero-grid">
+                <div>
+                    <h2>About GitHub Copilot Dev Days | Gombe</h2>
+                    <p>Our demo session brought together the local community to explore GitHub Copilot, showcase new ideas, and celebrate collaboration. This site highlights the sweepstakes, event photos, social engagement, and Air Plug Data App introduced by a community member.</p>
+                    <p><strong>Date:</strong> April 2026 · <strong>Location:</strong> Gombe</p>
+                    <p><strong>Note:</strong> Air Plug Data App is available as an APK for Android devices only.</p>
+                </div>
+                <div class="hero-summary">
+                    <span class="info-badge"><i class="fas fa-clock"></i>&nbsp;Sweepstakes closes May 15, 2026</span>
+                    <p class="summary-note">Join the community challenge: enter the sweepstakes, upload your social posts, and download the Air Plug Data App for a chance to win exciting prizes.</p>
+                </div>
+            </div>
+        </div>
         <div class="section">
             <i class="fas fa-trophy"></i>
             <h2>Sweepstakes for Copilot Pro</h2>
             <p>Participate in our sweepstakes and stand a chance to win GitHub Copilot Pro! Follow the instructions below to enter.</p>
             <a href="https://aka.ms/githubcopilotdevdays/sweepstakes" class="button" target="_blank">Enter Sweepstakes</a>
-            <p><strong>Instructions:</strong> Fill out the form with your details and share your favorite Copilot tip on social media with #CopilotDevDayGombe.</p>
+            <p><strong>Instructions:</strong> Fill out the form with your details and share your favorite Copilot tip on social media with #CopilotDevDaysGombe.</p>
+            <p><strong>Entry closes:</strong> May 15, 2026.</p>
         </div>
         <div class="section">
             <i class="fas fa-camera"></i>
@@ -131,7 +184,8 @@
             <i class="fas fa-download"></i>
             <h2>Download Air Plug Data App</h2>
             <p>Download Air Plug data app, a product by one of our community members. Participants who download and create an account stand a chance to win prizes!</p>
-            <a href="https://gitlab.com/abubakaribrahim30012/ariplug/-/raw/main/app-release.apk?inline=false" class="button" download onclick="return confirm('This will download an APK file. Are you sure you want to continue?')">Download APK</a>
+            <p><em>APK for Android devices only.</em></p>
+            <a href="https://gitlab.com/abubakaribrahim30012/ariplug/-/raw/main/app-release.apk?inline=false" class="button" download onclick="return confirm('This will download an APK file. Are you sure you want to continue?')">Download Air Plug App</a>
         </div>
     </div>
     <footer>
