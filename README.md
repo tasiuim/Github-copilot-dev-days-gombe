@@ -1,6 +1,6 @@
-# GitHub Copilot Dev Day | Gombe
+# GitHub Copilot Dev Days | Gombe
 
-This is the official website for GitHub Copilot Dev Day | Gombe.
+This is the official website for GitHub Copilot Dev Days | Gombe.
 
 ## Hosting on GitHub Pages
 
