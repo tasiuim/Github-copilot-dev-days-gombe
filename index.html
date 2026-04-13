@@ -4,85 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Copilot Dev Day | Gombe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
+            min-height: 100vh;
         }
         header {
-            background-color: #24292e;
+            background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+            font-weight: 300;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 1000px;
+            margin: -30px auto 0;
             padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .section {
-            margin-bottom: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+        .section i {
+            font-size: 3em;
+            color: #0366d6;
+            margin-bottom: 20px;
         }
         h2 {
-            color: #0366d6;
+            color: #24292e;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #0366d6;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #0366d6 0%, #0056b3 100%);
             color: white;
-            border-radius: 5px;
+            border-radius: 25px;
             text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .button:hover {
-            background-color: #0056b3;
+            background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #24292e;
+            color: white;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .container {
+                grid-template-columns: 1fr;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>GitHub Copilot Dev Day | Gombe</h1>
-        <p>Join us for an exciting day of learning and innovation with GitHub Copilot!</p>
+        <p>Thanks for Joining Us for an exciting day of learning and innovation at Github Copilot Dev Day | Gombe</p>
     </header>
     <div class="container">
         <div class="section">
+            <i class="fas fa-trophy"></i>
             <h2>Sweepstakes for Copilot Pro</h2>
             <p>Participate in our sweepstakes and stand a chance to win GitHub Copilot Pro! Follow the instructions below to enter.</p>
             <a href="https://forms.gle/example-sweepstakes" class="button" target="_blank">Enter Sweepstakes</a>
             <p><strong>Instructions:</strong> Fill out the form with your details and share your favorite Copilot tip on social media with #CopilotDevDayGombe.</p>
         </div>
         <div class="section">
+            <i class="fas fa-camera"></i>
             <h2>Event Pictures</h2>
             <p>Relive the moments from GitHub Copilot Dev Day | Gombe. Check out the gallery of photos from the event.</p>
-            <a href="images/" class="button" target="_blank">View Pictures</a>
+            <a href="https://photos.app.goo.gl/qAp5Xwe4Ax7THufw8" class="button" target="_blank">View Pictures</a>
         </div>
         <div class="section">
+            <i class="fas fa-share-alt"></i>
             <h2>Social Media Engagement</h2>
             <p>Upload your social media posts related to the event to our Google Sheet for a chance to boost engagement and win prizes!</p>
             <a href="https://docs.google.com/spreadsheets/d/example-sheet-id" class="button" target="_blank">Upload to Google Sheet</a>
         </div>
         <div class="section">
+            <i class="fas fa-download"></i>
             <h2>Download Data App</h2>
-            <p>Download our data app and use it to analyze event data. Participants who submit insights stand a chance to win prizes!</p>
-            <a href="downloads/data-app.zip" class="button" download>Download Data App</a>
+            <p>Download our data app, a product by one of our community members, and use it to analyze event data. Participants who submit insights stand a chance to win prizes!</p>
+            <a href="https://gitlab.com/abubakaribrahim30012/ariplug/-/raw/main/app-release.apk?inline=false" class="button" download>Download APK</a>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2026 GitHub Copilot Dev Day | Gombe. Hosted on GitHub Pages.</p>
+    </footer>
 </body>
 </html>
