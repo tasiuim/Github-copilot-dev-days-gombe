@@ -23,6 +23,25 @@
             padding: 60px 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .copilot-logo {
+            width: 72px;
+            height: 72px;
+            border-radius: 22px;
+            background: radial-gradient(circle at 30% 30%, #2dd4bf 0%, #14b8a6 50%, #0f766e 100%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(45,212,191,0.25);
+        }
+        .copilot-logo svg {
+            width: 42px;
+            height: 42px;
+        }
         h1 {
             margin: 0;
             font-size: 3em;
@@ -140,6 +159,21 @@
 </head>
 <body>
     <header>
+        <div class="logo-row">
+            <div class="copilot-logo" aria-label="Copilot logo">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="copilot-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#2dd4bf"/>
+                            <stop offset="100%" stop-color="#0f766e"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="128" cy="128" r="96" fill="url(#copilot-grad)"/>
+                    <path d="M116 76c-19.3 0-35 15.7-35 35v40h70v-40c0-19.3-15.7-35-35-35Z" fill="#ffffff" opacity="0.95"/>
+                    <rect x="116" y="114" width="70" height="20" rx="10" fill="#ffffff" opacity="0.95"/>
+                </svg>
+            </div>
+        </div>
         <h1>GitHub Copilot Dev Days | Gombe</h1>
         <p>Thanks for Joining Us for an exciting day of learning and innovation at Github Copilot Dev Days | Gombe</p>
     </header>
